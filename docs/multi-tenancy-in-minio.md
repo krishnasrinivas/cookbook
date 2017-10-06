@@ -68,6 +68,10 @@ server {
            # proxy the request to Minio-3
 	       proxy_pass http://localhost:9003;
 	    }
+     }
+    location /ROML2P775VPAT7RLPOWU/ {
+      proxy_set_header    Host $http_host;
+      proxy_pass          http://127.0.0.1:9000/;
     }
 }
 ```
